@@ -146,3 +146,24 @@ console.log(4==='4'); //false /*In STRict Equal it checks both value and data ty
 */
 
 console.log(3>2>1);//  true>1 Coercion hoga 1>1 to false 
+
+
+// ************ARRAYS *********************************************
+
+let languages=["Python","C","Java"] //Array can contain objects , string 
+
+console.log(languages.length) //length method
+// console.log(languages[1]) C //Index if index out of bound returns undefined 
+// -ve index not possible unlike Python
+
+//FOR ADDING ITEM IN JS 
+languages.push("Dart"); //adds at end
+
+let lngth=languages.unshift("Java"); // Insert item at start and returns new length of array
+console.log(languages);
+console.log(lngth); //5 new len of array !
+
+console.log(languages.pop());// removes  from last 
+languages.shift(); //Removes item from first 
+
+console.log(languages);
