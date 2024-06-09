@@ -51,3 +51,21 @@ console.log('logged in');
 
  //callbacks 
  
+//  IIFE Immediately invoked function expression 
+
+(function greet(){
+    console.log('Good Morning ');
+
+})();
+
+//Arrow function 
+
+const wishes=()=>{
+    console.log('Happy Birthday Harsh');
+}
+
+wishes();
+
+const sum=(n1,n2)=>n1+n2;
+res=sum(1,2);
+console.log(res);
