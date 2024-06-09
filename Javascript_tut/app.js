@@ -161,9 +161,169 @@ languages.push("Dart"); //adds at end
 
 let lngth=languages.unshift("Java"); // Insert item at start and returns new length of array
 console.log(languages);
-console.log(lngth); //5 new len of array !
+console.log(languages.length); //5 new len of array !
 
 console.log(languages.pop());// removes  from last 
-languages.shift(); //Removes item from first 
+languages.shift(); //Removes first  item from first 
 
 console.log(languages);
+
+//loops 
+
+for(let i=0;i<5;i++){
+    console.log("Hello world in loop ");
+}
+
+
+let actors=[
+
+    {name:"Actor 1 ", payment:100},
+    {name:"Actor 2 ", payment:200},
+    {name:"Actor 3 ", payment:300},
+]
+
+
+// LOOPS ||1.fOR LOOP      || 2. forEach   ||3.for of
+// for(let i=0;i<actors.length;i++){        1. FOR LOOPS
+//     actors[i].payment=actors[i].payment-10;
+// }
+
+
+// 2. forEach  
+actors.forEach((actor)=>{
+    // console.log(actor);
+    actor.payment=actor.payment-10;
+
+})
+console.log(actors);
+
+// 3. for of 
+
+for(let actor of actors){
+    console.log(actor.name);
+}
+
+
+// ..FILTER METHOD !! New Array 
+
+const students=[
+    {name:"Student 1 ", marks:55},
+    {name:"Student 2 ", marks:60},
+    {name:"Student 3 ", marks:45},
+    {name:"Student 4 ", marks:35},
+    {name:"Student 5 ", marks:25},
+]
+
+let fstud= students.filter((student)=>{
+//  if (student.marks<40){
+//     return true;
+//  }
+return student.marks<45;
+
+})
+
+// console.log(fstud);  
+
+let ft=students.filter((student=>student.marks<40));
+console.log(ft);
+
+// MAP method || new array
+
+const users=[
+    { fname:'John',lname:'Doe'},
+
+    { fname:'Tony',lname:'Stark'},
+
+    { fname:'Wanda',lname:'Killer'}
+]
+
+const finalUsers=users.map((usery)=>{
+    return {fullname:`${usery.fname} ${usery.lname} `}
+})
+
+console.log(finalUsers);
+
+
+//Reduce
+
+const movies=[
+    {name:"Interstellar", budget:100},
+    {name:"Inception", budget:200},
+    {name:"Matrix", budget:300}
+]
+
+// let sum=0;
+// movies.forEach((movie=>{
+//     sum+=movie.budget;
+
+// }))
+
+//using reduce method 
+// (accumulator , initial value of variableas 2nd parameter)
+
+let sum=movies.reduce((acc,movie)=>{
+    acc+=movie.budget;
+    return acc;
+    
+},0)
+
+console.log(`The budget of all movies  is :  ${sum}`);
+
+//indexOf
+
+const admins=[2,1,5];
+
+const user= {name:'XYZ',id:5};
+
+let v=admins.indexOf(user.id);// returns index of matched 
+//otherwise returns -1 
+
+const isAd=admins.indexOf(user.id)>-1;
+
+console.log(isAd);
+
+//includes method 
+
+console.log(admins.includes(user.id));
+
+//find method 
+// Returns the matching objet otherwise undefined 
+const userl=[
+    {name:'XYc',id:1},
+    {name:'afc',id:2},
+    {name:'dsc',id:3},
+]
+
+const myuser=userl.find((user)=>{
+    if(user.id===2){
+        return true;
+    }
+
+})
+console.log(myuser);
+
+const myusern=userl.find((user)=>{
+    if(user.name==="XYc"){
+        return true;
+    }
+
+})
+
+console.log(myusern);
+
+//sort
+const names=['Zishan','Jane',"harsh",'killer','georgie',"Ansh"]
+names.sort();
+console.log(names);
+//[ 'Ansh', 'Jane', 'Zishan', 'georgie', 'harsh', 'killer' ]
+
+//splice method
+
+//(index, kitne elements delete krne!)
+
+names.splice(2,3);
+console.log(names);
+
+
+// ******************************FUNCTIONS**********************************************************
+
