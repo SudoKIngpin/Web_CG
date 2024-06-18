@@ -16,7 +16,7 @@ function createItems(item){   //50 objects so 50 elements to be created dynamica
     const title=document.createElement('h4');
 
     photo.src=item.thumbnailUrl; //dynamically updating value from API object 
-    title.innerHTML=item.title;
+    title.innerHTML=`Title No: ${item.id}: ${item.title}`;
 
     card.appendChild(photo);
     card.appendChild(title); // appendind each element to main card element 
