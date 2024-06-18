@@ -99,7 +99,7 @@ console.log(gat); // o/p as undefined
 4. Bitwise 
 5. Logical (&&,||,,!)
 6.String 
-7. Conditional (Ternary operator )(condition?st1:st2)
+7. Conditional (?Ternary operator )(condition?st1:st2)
 8. Comma 
 9. Unary 
 10. Relational Operator 
